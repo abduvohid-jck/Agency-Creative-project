@@ -1,0 +1,142 @@
+.about-us {
+  margin-bottom: 150px;
+  .first-description {
+    margin-bottom: 24px;
+  }
+  .br-for-responsive {
+    display: none;
+  }
+  .description-for-responsive {
+    display: none;
+  }
+  &__sub-title {
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $BLUE-COLOR;
+  }
+  &__title {
+    font-family: Nunito;
+    font-size: 55px;
+    letter-spacing: 0.003em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 38px;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: url(../../assets/images/orange-dots.svg);
+      position: absolute;
+      top: -18px;
+      left: -30px;
+      z-index: -1;
+    }
+    &::after {
+      content: url(../../assets/images/purple-dots.svg);
+      position: absolute;
+      bottom: -9.2px;
+      left: 503px;
+      z-index: -1;
+    }
+  }
+  &__description {
+    font-family: Quicksand;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 0.01em;
+  }
+  &__button {
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 12px 50px;
+    background-color: white;
+    color: $BLUE-COLOR;
+    border-radius: 24px;
+    border: 1px solid $BLUE-COLOR;
+    margin-top: 24px;
+    margin-right: 35px;
+  }
+  &__our-story-button {
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 12px 50px;
+    border-radius: 24px;
+    border: 1px solid $BLUE-COLOR;
+    background-color: white;
+    color: $BLUE-COLOR;
+  }
+}
+
+@include mobile() {
+  .about-us {
+    .br-for-responsive {
+      display: block;
+    }
+    .br-for-desktop {
+      display: none;
+    }
+    .second-description {
+      display: none;
+    }
+    .description-for-responsive {
+      display: block;
+    }
+    &__wrapper {
+      flex-direction: column-reverse;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__sub-title {
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 24px;
+    }
+    &__description {
+      font-family: Quicksand;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+    }
+    &__descriptions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__button,
+    &__our-story-button {
+      padding: 10px 35px;
+      font-size: 12px;
+    }
+    &__image {
+      width: 340px;
+      height: 242px;
+    }
+    &__main-image {
+      margin-top: 66px;
+      position: relative;
+      &::after {
+        content: url(../../assets/images/purple-dots.svg);
+        position: absolute;
+        top: -16px; 
+        left: 2px;
+        z-index: -1;
+      }
+    }
+  }
+}

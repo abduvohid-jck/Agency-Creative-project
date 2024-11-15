@@ -1,0 +1,114 @@
+.testimonial {
+  margin-bottom: 247px;
+  &__card {
+    padding: 49.25px 31px 106.75px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 8px 24px 0px #0000000d;
+  }
+  &__sub-title {
+    font-family: Quicksand;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: $BLUE-COLOR;
+    text-align: center;
+  }
+  &__title {
+    font-family: Nunito;
+    font-size: 55px;
+    letter-spacing: 0.003em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  &__wrapper {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &::before {
+      content: url(../../assets/images/blue-dots.svg);
+      position: absolute;
+      bottom: 465.48px;
+      left: 100.68px;
+      rotate: 14.48deg;
+    }
+    &::after {
+      content: url(../../assets/images/blue-dots.svg);
+      position: absolute;
+      right: -20px;
+      bottom: -36.5px;
+      rotate: 14.48deg;
+      z-index: -1;
+    }
+  }
+  &__card-top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  &__name {
+    font-family: Quicksand;
+    font-size: 20px;
+    font-weight: 600;
+    color: $BLUE-COLOR;
+  }
+  &__job {
+    font-family: Quicksand;
+    font-size: 11px;
+    letter-spacing: 0.01em;
+    color: #464646;
+  }
+  &__comment {
+    font-family: Quicksand;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.01em;
+    color: #464646;
+    margin-top: 25px;
+  }
+  &__comment-responsive {
+    display: none;
+  }
+}
+
+@include mobile() {
+  .testimonial {
+    margin-bottom: 100px;
+    &__sub-title {
+      font-size: 14px;
+    }
+    &__title {
+      font-size: 24px;
+      margin-top: 10px;
+      margin-bottom: 35px;
+    }
+    &__wrapper {
+      &::after {
+        display: none;
+      }
+      &::before {
+        display: none;
+      }
+      justify-content: center;
+    }
+    .testimonial-desktop-card {
+      display: none;
+    }
+    &__name {
+      font-size: 18px;
+      margin-bottom: 7px;
+    }
+    &__comment {
+      display: none;
+    }
+    &__comment-responsive {
+      display: block;
+      font-size: 14px;
+      line-height: 24px;
+    }
+    &__card {
+      padding: 40px 20px 40px 40px;
+    }
+  }
+}

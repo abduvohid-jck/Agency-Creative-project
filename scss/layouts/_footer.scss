@@ -1,0 +1,74 @@
+.footer {
+  padding-top: 132px;
+  padding-bottom: 33px;
+  background-color: #383638;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+  }
+  &__links {
+    font-family: Quicksand;
+    font-size: 18.73px;
+    font-weight: 300;
+    color: white;
+  }
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+  &__list-title {
+    font-family: Quicksand;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27.5px;
+    color: white;
+  }
+  &__social-networks {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 76px;
+  }
+  hr {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+  }
+  p {
+    text-align: center;
+    margin-top: 16px;
+    font-family: Quicksand;
+    font-size: 18px;
+    font-weight: 400;
+    color: white;
+  }
+  .terms-and-company-div{
+    display: flex;
+    justify-content: center;
+    gap: 77px;
+  }
+}
+
+@include mobile (){
+    .footer{
+        padding-top: 45px;
+        &__wrapper{
+            flex-direction: column;
+        }
+        .terms-and-company-div{
+            width: 100%;
+            margin-top: 80px;
+            justify-content: space-between;
+        }
+        .contact-list{
+            margin-top: 85px;
+            margin-bottom: 45px;
+        }
+        hr{
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,243 @@
+.hero {
+  padding-top: 68.11px;
+  padding-bottom: 194.58px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  .rate-title {
+    opacity: 50%;
+  }
+  .rate-elements {
+    font-family: Nunito;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .rate-elements span {
+    font-weight: 700;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-family: Nunito;
+    font-size: 64px;
+    letter-spacing: 0.01em;
+    text-align: center;
+  }
+  &__description {
+    font-family: Nunito;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: #464646;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  &__button {
+    font-family: Quicksand;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding: 12px 50px;
+    background-color: white;
+    color: $BLUE-COLOR;
+    border: 1px solid $BLUE-COLOR;
+    border-radius: 24px;
+  }
+  &__top-blue-ball {
+    position: absolute;
+    top: 290px;
+    left: 94px;
+  }
+  &__top-red-ball {
+    position: absolute;
+    top: 140px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  &__rate {
+    position: absolute;
+    background-color: white;
+    padding: 17px 31px 16px 20px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    left: -107px;
+    top: 24px;
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+  }
+  &__image-box {
+    margin-top: 99px;
+    position: relative;
+    &::before {
+      content: url(../../assets/images/blue-dots.svg);
+      position: absolute;
+      left: 138.93px;
+      top: -19.7px;
+      z-index: -1;
+    }
+    &::after {
+      content: url(../../assets/images/red-dots.svg);
+      position: absolute;
+      left: 174.27px;
+      bottom: -18.42px;
+      z-index: -1;
+    }
+  }
+  &__user {
+    background-color: white;
+    position: absolute;
+    padding: 27px 20px 25px 21px;
+    box-shadow: 0px 8px 24px 0px #00000026;
+    border-radius: 16px;
+    right: -107px;
+    top: 342px;
+    &__top {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &__name {
+      font-family: Quicksand;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+    &__job {
+      font-family: Quicksand;
+      font-size: 6px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      opacity: 50%;
+    }
+    &__comment {
+      font-family: Nunito;
+      font-size: 10px;
+      line-height: 13.64px;
+      letter-spacing: 0.01em;
+      margin-top: 12px;
+    }
+  }
+  &__bottom-red-ball {
+    position: absolute;
+    top: 184px;
+    left: -70px;
+  }
+  &__bottom-blue-ball {
+    position: absolute;
+    top: 0;
+    right: -156px;
+    top: -50px;
+  }
+  &__green-dot {
+    position: absolute;
+    top: 395px;
+    left: 193px;
+    z-index: -1;
+  }
+}
+.br-for-responsive {
+  display: none;
+}
+
+@include mobile() {
+  .hero {
+    padding-bottom: 99px;
+    &__image-box {
+      &::before {
+        left: -9.07px;
+        top: 168.3px;
+      }
+      &::after {
+        position: absolute;
+        left: 247px;
+        z-index: -1;
+        top: -12px;
+      }
+    }
+    &__title {
+      font-size: 28px;
+    }
+    &__top-blue-ball {
+      left: 0;
+      transform: translateX(-40%);
+    }
+    &__top-red-ball {
+      top: 40px;
+    }
+    &__bottom-blue-ball {
+      display: none;
+    }
+    &__bottom-red-ball {
+      display: none;
+    }
+    &__description {
+      font-size: 14px;
+    }
+    &__button {
+      font-size: 12px;
+      padding: 10px 35px;
+    }
+    &__image {
+      width: 330px;
+      height: 224px;
+    }
+    &__rate {
+      padding: 8px 19px 9px 14.33px;
+      top: -15px;
+      left: -9px;
+      text-align: center;
+      &__top {
+        font-size: 6px;
+      }
+    }
+    &__user-image {
+      width: 15.42px;
+      height: 15.42px;
+    }
+    &__user {
+      top: 165px;
+      right: -11px;
+      padding: 13.1px 9.64px 10.78px 10.12px;
+      &__top {
+        gap: 4.82px;
+      }
+      &__comment {
+        font-size: 5px;
+        font-weight: 400;
+        line-height: 6.82px;
+        letter-spacing: 0.01em;
+        margin-top: 5.78px;
+      }
+      &__name {
+        font-size: 5px;
+      }
+      &__job {
+        font-size: 3px;
+      }
+    }
+    &__green-dot{
+      display: none;
+    }
+  }
+  .br-for-responsive {
+    display: block;
+  }
+  .responsive-sizes-of-balls {
+    height: 60px;
+    width: 60px;
+  }
+  .rate-elements {
+    font-size: 12px !important;
+  }
+}
